@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic curriculum vitae of Nawres Alwan, PhD Candidate in Quantum Cryptography and Computational Quantum Researcher.">
+  <title>Nawres Alwan - Academic Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3ebd9;
+      --bg-2: #faf3e2;
+      --bg-3: #e9dec3;
+      --ink: #1c1813;
+      --ink-2: #4a4338;
+      --ink-3: #847a64;
+      --rule: #c9be9f;
+      --rule-soft: #ddd1b3;
+      --accent: #8a2317;
+      --accent-2: #6b1c12;
+      --sage: #5d7440;
+      --serif-display: "Fraunces", Georgia, serif;
+      --serif-body: "Newsreader", Georgia, serif;
+      --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      --max: 1120px;
+    }
+
+    [data-theme="dim"] {
+      --bg: #181410;
+      --bg-2: #211c15;
+      --bg-3: #141009;
+      --ink: #e6dec8;
+      --ink-2: #b8ad94;
+      --ink-3: #7d735a;
+      --rule: #3a3328;
+      --rule-soft: #2a2418;
+      --accent: #d8a070;
+      --accent-2: #b88050;
+      --sage: #9ab068;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif-body);
+      font-size: 17px;
+      line-height: 1.62;
+      font-feature-settings: "kern", "liga", "onum";
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: background 0.35s ease, color 0.35s ease;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0 0.03 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity: 0.32;
+      mix-blend-mode: multiply;
+      z-index: 9999;
+    }
+    [data-theme="dim"] body::before { mix-blend-mode: screen; opacity: 0.11; }
+
+    a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--accent); }
+    button { font: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+    ul, ol { list-style: none; }
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 36px; }
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .masthead-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 17px 0 14px;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: baseline; gap: 12px; }
+    .brand-mark {
+      font-family: var(--serif-display);
+      font-weight: 800;
+      font-size: 28px;
+      color: var(--accent);
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+    .brand-name { font-family: var(--serif-display); font-weight: 700; font-size: 22px; }
+    .brand-tag { font-style: italic; font-size: 13px; color: var(--ink-3); border-left: 1px solid var(--rule); padding-left: 12px; }
+    .primary-nav { display: flex; align-items: center; gap: 22px; }
+    .primary-nav a { font-size: 13px; color: var(--ink-2); }
+    .nav-button {
+      border: 1px solid var(--rule);
+      padding: 6px 11px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      transition: all 0.2s ease;
+    }
+    .nav-button:hover { border-color: var(--ink); color: var(--ink); }
+
+    .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--rule); }
+    .hero-grid { display: grid; grid-template-columns: 7fr 4fr; gap: 70px; }
+    .hero-eyebrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+    }
+    .hero-label, .section-eyebrow {
+      font-size: 11px;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .hero-marker { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+    .hero-title {
+      font-family: var(--serif-display);
+      font-weight: 700;
+      font-size: clamp(43px, 6vw, 75px);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+    }
+    .hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .hero-role {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--sage);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-deck { font-size: 19px; line-height: 1.55; max-width: 680px; color: var(--ink-2); margin-bottom: 30px; }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 28px;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 21px 0;
+    }
+    .meta-cell { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .meta-label { font-size: 10px; font-variant: small-caps; letter-spacing: 0.1em; color: var(--ink-3); }
+    .meta-value { font-family: var(--serif-display); font-size: 16px; font-weight: 500; overflow-wrap: anywhere; }
+
+    .hero-aside { border-left: 1px solid var(--rule); padding-left: 34px; }
+    .aside-head {
+      font-size: 11px;
+      font-variant: small-caps;
+      letter-spacing: 0.12em;
+      color: var(--ink-3);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .aside-list li {
+      display: grid;
+      grid-template-columns: 76px 1fr auto;
+      gap: 13px;
+      align-items: baseline;
+      padding: 13px 0;
+      border-bottom: 1px dotted var(--rule);
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+    .aside-list li a { display: contents; }
+    .aside-list li:hover { background: var(--bg-2); margin: 0 -8px; padding-left: 8px; padding-right: 8px; }
+    .aside-date { font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+    .aside-title { font-weight: 500; }
+    .aside-tag { font-size: 9px; font-variant: small-caps; letter-spacing: 0.08em; padding: 2px 7px; border: 1px solid var(--sage); color: var(--sage); white-space: nowrap; }
+
+    .section-head { padding: 58px 0 27px; border-bottom: 1px solid var(--rule); margin-bottom: 38px; }
+    .section-eyebrow { margin-bottom: 10px; }
+    .section-title {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -0.018em;
+      max-width: 780px;
+    }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .section-intro { color: var(--ink-2); max-width: 760px; margin-top: 13px; font-size: 16px; }
+
+    .split-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 62px; margin-bottom: 56px; }
+    .balanced-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 56px; }
+    .column-title { font-family: var(--serif-display); margin-bottom: 24px; color: var(--accent); font-style: italic; font-size: 21px; }
+    .timeline-block { margin-bottom: 32px; }
+    .timeline-date { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 6px; display: block; }
+    .timeline-title { font-family: var(--serif-display); font-weight: 600; font-size: 20px; line-height: 1.2; margin-bottom: 4px; }
+    .timeline-subtitle { font-size: 15px; color: var(--ink-2); font-style: italic; margin-bottom: 11px; }
+    .timeline-body { font-size: 15px; color: var(--ink-2); line-height: 1.62; }
+    .timeline-body p { margin-bottom: 10px; }
+    .timeline-body ul { margin-top: 8px; }
+    .timeline-body li { padding: 4px 0 4px 18px; position: relative; }
+    .timeline-body li::before { content: "-"; position: absolute; left: 0; color: var(--accent); }
+
+    .funding-card {
+      border: 1px solid var(--rule);
+      background: var(--bg-2);
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .funding-card h4 { font-family: var(--serif-display); font-size: 19px; margin-bottom: 6px; }
+    .funding-card p { color: var(--ink-2); font-size: 15px; }
+
+    .filter-group { margin-bottom: 24px; }
+    .filter-title { margin-bottom: 11px; font-weight: 600; font-family: var(--serif-display); }
+    .filter-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter { font-size: 12px; padding: 6px 12px; border: 1px solid var(--rule); background: var(--bg-2); color: var(--ink-2); font-family: var(--mono); }
+
+    .rules { font-size: 15px; color: var(--ink-2); }
+    .rules li { padding: 7px 0 7px 19px; position: relative; }
+    .rules li::before { content: "-"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .rules strong { color: var(--ink); }
+
+    .research-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .research-card { border-top: 2px solid var(--accent); background: var(--bg-2); padding: 20px; min-height: 152px; }
+    .research-card h3 { font-family: var(--serif-display); font-size: 18px; margin-bottom: 8px; }
+    .research-card p { color: var(--ink-2); font-size: 14px; }
+
+    .pub-group { margin-bottom: 48px; }
+    .pub-group-title {
+      font-family: var(--serif-display);
+      font-size: 24px;
+      font-style: italic;
+      color: var(--accent);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 4px;
+    }
+    .library-list { display: flex; flex-direction: column; }
+    .library-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 22px;
+      padding: 21px 0;
+      border-bottom: 1px solid var(--rule-soft);
+      align-items: start;
+      transition: background 0.2s ease;
+    }
+    .library-item:hover { background: var(--bg-2); margin: 0 -12px; padding-left: 12px; padding-right: 12px; }
+    .lib-num { font-family: var(--serif-display); font-style: italic; font-size: 23px; color: var(--ink-3); line-height: 1.2; }
+    .lib-title { font-family: var(--serif-display); font-weight: 500; font-size: 18px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
+    .library-item:hover .lib-title { color: var(--accent); }
+    .lib-desc { font-size: 14px; color: var(--ink-2); margin-bottom: 8px; max-width: 820px; }
+    .lib-meta { display: flex; flex-wrap: wrap; gap: 7px; font-size: 11px; color: var(--ink-3); font-variant: small-caps; letter-spacing: 0.04em; align-items: center; }
+    .lib-meta .dot { color: var(--rule); }
+    .status { border: 1px solid var(--sage); color: var(--sage); padding: 1px 6px; font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; }
+
+    .conference-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 30px; }
+    .conference-item { border-top: 1px solid var(--rule); padding-top: 13px; }
+    .conference-item time { font-family: var(--mono); color: var(--accent); font-size: 11px; }
+    .conference-item h3 { font-family: var(--serif-display); font-size: 17px; margin-top: 5px; line-height: 1.3; }
+    .conference-item p { color: var(--ink-2); font-size: 14px; margin-top: 4px; }
+
+    .closing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 58px; }
+    .closing-card { border-top: 1px solid var(--rule); padding-top: 15px; }
+    .closing-card h3 { font-family: var(--serif-display); font-size: 19px; color: var(--accent); margin-bottom: 8px; }
+    .closing-card p, .closing-card li { color: var(--ink-2); font-size: 15px; }
+    .closing-card li { margin-bottom: 5px; }
+
+    footer { border-top: 1px solid var(--rule); padding: 24px 0 34px; color: var(--ink-3); font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; }
+
+    @media (max-width: 940px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-aside { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 30px; }
+      .primary-nav a { display: none; }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 20px; }
+      .brand-tag { display: none; }
+      .hero { padding-top: 46px; }
+      .hero-meta, .balanced-grid, .closing-grid, .conference-list, .research-cards { grid-template-columns: 1fr; }
+      .split-grid { grid-template-columns: 1fr; gap: 34px; }
+      .footer-row { flex-direction: column; }
+      .library-item { grid-template-columns: 36px 1fr; gap: 13px; }
+    }
+
+    @media print {
+      :root {
+        --bg: #fff;
+        --bg-2: #fff;
+        --ink: #000;
+        --ink-2: #222;
+        --ink-3: #555;
+        --rule: #999;
+        --rule-soft: #ccc;
+        --accent: #000;
+        --sage: #000;
+      }
+      body { background: #fff !important; color: #000 !important; font-size: 10.5pt; line-height: 1.38; }
+      body::before, .theme-toggle, .print-button, .primary-nav a { display: none !important; }
+      .masthead { position: static; background: #fff; border-bottom: 2px solid #000; }
+      .masthead-row { padding: 8px 0; }
+      .hero { padding: 20px 0; }
+      .hero-title { font-size: 34pt; }
+      .hero-deck { font-size: 11pt; }
+      .hero-grid { grid-template-columns: 7fr 4fr; gap: 28px; }
+      .hero-aside { border-left: 1px solid #aaa; border-top: 0; padding-left: 22px; padding-top: 0; }
+      .section-head { padding: 22px 0 10px; margin-bottom: 16px; page-break-after: avoid; }
+      .section-title { font-size: 20pt; }
+      .split-grid, .balanced-grid { gap: 28px; margin-bottom: 24px; }
+      .timeline-block, .funding-card, .research-card, .library-item, .conference-item, .closing-card { break-inside: avoid; page-break-inside: avoid; }
+      .research-card, .funding-card, .filter { background: #fff; }
+      .library-item { padding: 11px 0; }
+      .pub-group { margin-bottom: 26px; }
+      .conference-list { gap: 12px 22px; }
+      .closing-grid { margin-bottom: 20px; }
+      footer { padding: 14px 0; }
+      a { color: #000 !important; text-decoration: none; }
+      @page { size: A4; margin: 12mm; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="masthead-row">
+        <div class="brand">
+          <span class="brand-mark">N.</span>
+          <span class="brand-name">Nawres Alwan</span>
+          <span class="brand-tag">Academic Curriculum Vitae</span>
+        </div>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#education">Education</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <button class="nav-button print-button" type="button" onclick="window.print()">Print / PDF</button>
+          <button class="nav-button theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme"><span data-theme-label>Dim</span></button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="hero-eyebrow">
+              <span class="hero-label">Academic Curriculum Vitae</span>
+              <span class="hero-marker">Updated 2026</span>
+            </div>
+            <h1 class="hero-title">Nawres Alwan<br><em>PhD Candidate.</em></h1>
+            <div class="hero-role">Quantum Cryptography | Computational Quantum Research | AI Engineering</div>
+            <p class="hero-deck">
+              PhD candidate specializing in Quantum Cryptography, with a multidisciplinary research background spanning quantum mechanics, quantum information, cryptography, quantum image processing, chaos theory, dynamical systems, numerical simulation, and artificial intelligence. Experienced in developing mathematical models, computational algorithms, quantum simulations, and deep-learning applications. Recipient of two Graduate Research Assistantship grants from Universiti Malaya.
+            </p>
+            <div class="hero-meta">
+              <div class="meta-cell">
+                <span class="meta-label">Email</span>
+                <a class="meta-value" href="mailto:nawrasalwan@gmail.com">nawrasalwan@gmail.com</a>
+              </div>
+              <div class="meta-cell">
+                <span class="meta-label">Telephone</span>
+                <a class="meta-value" href="tel:+9647867348610">+964 786 734 8610</a>
+              </div>
+              <div class="meta-cell">
+                <span class="meta-label">Alternate Telephone</span>
+                <a class="meta-value" href="tel:+9647711174392">+964 771 117 4392</a>
+              </div>
+              <div class="meta-cell">
+                <span class="meta-label">Current Academic Status</span>
+                <span class="meta-value">PhD Candidate, expected completion 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-aside" aria-label="Academic profiles">
+            <div class="aside-head">Academic Profiles and Links</div>
+            <ul class="aside-list">
+              <li>
+                <a href="https://scholar.google.com/citations?hl=ar&amp;user=Vxe7MTgAAAAJ&amp;view_op=list_works&amp;sortby=title" target="_blank" rel="noopener noreferrer">
+                  <span class="aside-date">Google</span><span class="aside-title">Google Scholar</span><span class="aside-tag">Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57210597748" target="_blank" rel="noopener noreferrer">
+                  <span class="aside-date">Scopus</span><span class="aside-title">Author ID 57210597748</span><span class="aside-tag">Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.researchgate.net/profile/Nawras_Alwan3" target="_blank" rel="noopener noreferrer">
+                  <span class="aside-date">RG</span><span class="aside-title">ResearchGate</span><span class="aside-tag">Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/selectmesh?tab=repositories" target="_blank" rel="noopener noreferrer">
+                  <span class="aside-date">GitHub</span><span class="aside-title">selectmesh</span><span class="aside-tag">Code</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">I. Academic Foundation</div>
+        <h2 class="section-title">Education, Research Funding and <em>Professional Experience.</em></h2>
+      </div>
+
+      <div class="split-grid">
+        <div>
+          <h3 class="column-title">Education</h3>
+          <div class="timeline-block">
+            <span class="timeline-date">2021 - 2026 (expected)</span>
+            <h4 class="timeline-title">PhD Candidate in Quantum Cryptography</h4>
+            <div class="timeline-subtitle">Universiti Malaya, Malaysia</div>
+            <div class="timeline-body">
+              <p>Faculty of Computer Science and Information Technology.</p>
+              <p>Research focuses on quantum cryptography, quantum information, quantum image representation and encryption, quantum randomness, geometric phases, hyperchaotic systems, and quantum optimization.</p>
+            </div>
+          </div>
+
+          <div class="timeline-block">
+            <span class="timeline-date">November 2012 - April 2016</span>
+            <h4 class="timeline-title">Master of Science (M.Sc.)</h4>
+            <div class="timeline-subtitle">University of Technology</div>
+            <div class="timeline-body">
+              <p><strong>Thesis:</strong> Spectral Graph Theory with Applications.</p>
+              <p>Developed methods for obtaining characteristic polynomials and spectral properties of selected graph classes using adjacency, combinatorial Laplacian, and signless Laplacian matrices. The work also addressed extremal eigenvalues of connected irregular tripartite graphs and applications in chemistry and image clustering.</p>
+            </div>
+          </div>
+
+          <div class="timeline-block">
+            <span class="timeline-date">2007 - 2011</span>
+            <h4 class="timeline-title">Bachelor of Science (B.Sc.)</h4>
+            <div class="timeline-subtitle">University of Technology</div>
+            <div class="timeline-body">
+              <p><strong>Thesis:</strong> Spanning Tree.</p>
+              <p>Introduced multiple methods for computing spanning trees of weighted and unweighted graphs and developed a MATLAB program for comparative evaluation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="column-title">Professional Experience</h3>
+          <div class="timeline-block">
+            <span class="timeline-date">2024 - Present</span>
+            <h4 class="timeline-title">IT Department Manager</h4>
+            <div class="timeline-subtitle">Hezn Al-Aman for Trading and General Contracting</div>
+          </div>
+
+          <div class="timeline-block">
+            <span class="timeline-date">2016 - 2024</span>
+            <h4 class="timeline-title">Director</h4>
+            <div class="timeline-subtitle">Solution Center for Research and Software</div>
+          </div>
+
+          <div class="timeline-block">
+            <span class="timeline-date">Academic Teaching Experience</span>
+            <h4 class="timeline-title">Lecturer in Mathematics, Image Processing and Programming</h4>
+            <div class="timeline-subtitle">Mathematics, image processing, MATLAB and computational methods</div>
+            <div class="timeline-body">
+              <p>Delivered teaching and technical instruction in mathematics, image processing, and MATLAB programming.</p>
+            </div>
+          </div>
+
+          <h3 class="column-title" style="margin-top: 38px;">Research Funding</h3>
+          <div class="funding-card">
+            <h4>Graduate Research Assistantship Grants</h4>
+            <p>Awarded two Graduate Research Assistantship grants by Universiti Malaya in support of doctoral research and research contributions in quantum cryptography and computational quantum science.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="wrap">
+      <div class="section-head" style="padding-top: 0;">
+        <div class="section-eyebrow">II. Research Profile</div>
+        <h2 class="section-title">Selected Research Experience and <em>Technical Capabilities.</em></h2>
+        <p class="section-intro">The following areas reflect completed research, published work, ongoing manuscripts, implemented software, and academic projects.</p>
+      </div>
+
+      <div class="research-cards">
+        <article class="research-card">
+          <h3>Quantum Cryptography and QKD</h3>
+          <p>Development and analysis of quantum cryptographic models, dynamically modulated quantum key distribution, finite-key security concepts, and secure quantum communication protocols.</p>
+        </article>
+        <article class="research-card">
+          <h3>Quantum-Mechanical and Hamiltonian Modelling</h3>
+          <p>Mathematical and computational modelling of quantum systems, Hamiltonian dynamics, quantum simulation, and quantum-information processes.</p>
+        </article>
+        <article class="research-card">
+          <h3>Quantum Geometric Phases</h3>
+          <p>Investigation of nonadiabatic and noncyclic geometric phases and their applications in quantum randomness, cryptography, and phase-sensitive quantum systems.</p>
+        </article>
+        <article class="research-card">
+          <h3>Quantum Image Processing</h3>
+          <p>Design of quantum image representation and encryption models using adjacency matrices, Fourier transforms, multichannel encoding, and quantum circuits.</p>
+        </article>
+        <article class="research-card">
+          <h3>Chaos and Dynamical Systems</h3>
+          <p>Development and analysis of high-dimensional hyperchaotic systems for encryption, pseudo-random number generation, secure information processing, and quantum-driving models.</p>
+        </article>
+        <article class="research-card">
+          <h3>Quantum Optimization</h3>
+          <p>Research on quantum natural-gradient optimization, damping strategies, trust-region concepts, variational quantum circuits, and robust numerical training methods.</p>
+        </article>
+        <article class="research-card">
+          <h3>Machine Learning and AI Engineering</h3>
+          <p>Development of deep-learning and computer-vision workflows for face recognition and optical character recognition, together with AI applications built using open-source models and frameworks.</p>
+        </article>
+        <article class="research-card">
+          <h3>Numerical and Scientific Computing</h3>
+          <p>Implementation of numerical experiments, simulation algorithms, data analysis, visualization, and reproducible scientific workflows using Python and MATLAB.</p>
+        </article>
+      </div>
+
+      <div class="balanced-grid" style="margin-top: 48px;">
+        <div>
+          <h3 class="column-title">Technical Skills</h3>
+          <div class="filter-group">
+            <div class="filter-title">Programming Languages</div>
+            <div class="filter-row">
+              <span class="filter">Python</span><span class="filter">MATLAB</span><span class="filter">JavaScript</span><span class="filter">TypeScript</span><span class="filter">HTML</span><span class="filter">CSS</span><span class="filter">Lean 4</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">AI and Machine Learning</div>
+            <div class="filter-row">
+              <span class="filter">TensorFlow</span><span class="filter">PyTorch</span><span class="filter">OpenCV</span><span class="filter">scikit-learn</span><span class="filter">Hugging Face</span><span class="filter">Tesseract OCR</span><span class="filter">Deep Learning</span><span class="filter">Computer Vision</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Quantum Computing and Scientific Tools</div>
+            <div class="filter-row">
+              <span class="filter">Qiskit</span><span class="filter">LaTeX</span><span class="filter">Numerical Simulation</span><span class="filter">Algorithm Development</span><span class="filter">Scientific Writing</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Web and Application Development</div>
+            <div class="filter-row">
+              <span class="filter">Django</span><span class="filter">Next.js</span><span class="filter">Open-source AI Integration</span><span class="filter">Microsoft Office</span><span class="filter">Edraw Max</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="column-title">Core Research Expertise</h3>
+          <ul class="rules">
+            <li><strong>Quantum cryptography:</strong> quantum key distribution, security modelling, and algorithm development.</li>
+            <li><strong>Quantum information:</strong> quantum circuits, quantum simulation, quantum image representations, and quantum encryption.</li>
+            <li><strong>Mathematical modelling:</strong> Hamiltonian systems, graph spectra, nonlinear systems, and optimization.</li>
+            <li><strong>Image and signal processing:</strong> image encryption, feature extraction, face recognition, OCR, and quantum-inspired image retrieval.</li>
+            <li><strong>Scientific computing:</strong> reproducible numerical implementation, computational experiments, and performance analysis.</li>
+            <li><strong>AI engineering:</strong> integration of open-source AI models into research and software workflows.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="wrap">
+      <div class="section-head" style="padding-top: 0;">
+        <div class="section-eyebrow">III. Research Output</div>
+        <h2 class="section-title">Publications, Conference Papers and <em>Current Manuscripts.</em></h2>
+        <p class="section-intro">Preprints and manuscripts are clearly separated from peer-reviewed publications to preserve publication-status accuracy.</p>
+      </div>
+
+      <div class="pub-group">
+        <h3 class="pub-group-title">Peer-Reviewed Journal Articles</h3>
+        <div class="library-list">
+          <article class="library-item"><div class="lib-num">01</div><div><h4 class="lib-title">Multilayered Quantum Computing and Simulation System for Enhanced Image Representation of HSI Based Fourier Transform and Adjacency Matrix</h4><div class="lib-meta"><span>Scientific Reports</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">02</div><div><h4 class="lib-title">A Comprehensive Review on Classification of Quantum Image Representations</h4><div class="lib-meta"><span>Archives of Computational Methods in Engineering</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">03</div><div><h4 class="lib-title">A Multi-Channel Quantum Image Representation Model with Qubit Sequences for Quantum-Inspired Image and Image Retrieval</h4><div class="lib-meta"><span>AIMS Mathematics</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">04</div><div><h4 class="lib-title">Color Image Encryption Through Multi-S-box Generated by Hyperchaotic System and Mixture of Pixel Bits</h4><div class="lib-meta"><span>Fractals</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">05</div><div><h4 class="lib-title">Coding and Descriptions for the Subset of Twin Star Mean Labeling</h4><div class="lib-meta"><span>Asia Pacific Journal of Mathematics</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">06</div><div><h4 class="lib-title">A Secure Image Cryptosystem via Multiple Chaotic Maps</h4><div class="lib-meta"><span>Eurasian Journal of Mathematical and Computer Applications</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">07</div><div><h4 class="lib-title">Tripartite Graphs with Energy Aggregation</h4><p class="lib-desc">N. Al-Saidi, N. A. Alwan, and R. T. Rasheed.</p><div class="lib-meta"><span>Boletim da Sociedade Paranaense de Matematica</span><span class="dot">&middot;</span><span>Vol. 38, No. 7, pp. 149-167</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">08</div><div><h4 class="lib-title">A General Formula for Characteristic Polynomials of Some Special Graphs</h4><p class="lib-desc">N. A. Alwan and N. M. Al-Saidi.</p><div class="lib-meta"><span>Engineering and Technology Journal</span><span class="dot">&middot;</span><span>Vol. 34, No. 5B, pp. 638-650</span><span class="dot">&middot;</span><span>2016</span><span class="status">Published</span></div></div></article>
+        </div>
+      </div>
+
+      <div class="pub-group">
+        <h3 class="pub-group-title">Peer-Reviewed Conference Papers and Book Chapters</h3>
+        <div class="library-list">
+          <article class="library-item"><div class="lib-num">09</div><div><h4 class="lib-title">A Trust Optimization Region of the Quantum Natural Gradient for the Large Damping Domain</h4><p class="lib-desc">Computational Science and Its Applications - ICCSA 2026 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>4 July 2026</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">10</div><div><h4 class="lib-title">A Pseudo Random Number Generator Based on 4D Hyperchaotic Systems, Riddled Basins of Attraction and Advanced Microfluidic Technology</h4><p class="lib-desc">Computational Science and Its Applications - ICCSA 2024 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>30 July 2024</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">11</div><div><h4 class="lib-title">Secure Image Encryption Using Single-Mode Fiber and Dense Wavelength Division Multiplexing in Chaotic Systems</h4><div class="lib-meta"><span>Springer</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">12</div><div><h4 class="lib-title">Performance-Enhancing of RSA Public Key via Three-Dimensional Hyperchaotic System</h4><p class="lib-desc">N. A. Alwan, A. Y. Yousif, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2325</span><span class="dot">&middot;</span><span>020027</span><span class="dot">&middot;</span><span>February 2021</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">13</div><div><h4 class="lib-title">A New Approach for the Characteristic Polynomial of a Complete Tripartite Graph</h4><p class="lib-desc">N. A. Alwan, N. M. Al-Saidi, and W. J. Abdulaa.</p><div class="lib-meta"><span>AIP Conference Proceedings 2334</span><span class="dot">&middot;</span><span>080002</span><span class="dot">&middot;</span><span>March 2021</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">14</div><div><h4 class="lib-title">Image Encryption Based on Highly Sensitive Chaotic System</h4><p class="lib-desc">D. S. Ali, N. A. Alwan, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2183</span><span class="dot">&middot;</span><span>080007</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">15</div><div><h4 class="lib-title">The Energy of a Tripartite Graph</h4><p class="lib-desc">N. A. Alwan, N. M. Al-Saidi, and R. T. Rasheed.</p><div class="lib-meta"><span>AIP Conference Proceedings 2086</span><span class="dot">&middot;</span><span>030006</span><span class="dot">&middot;</span><span>April 2019</span><span class="status">Published</span></div></div></article>
+        </div>
+      </div>
+
+      <div class="pub-group">
+        <h3 class="pub-group-title">Preprints and Manuscripts</h3>
+        <div class="library-list">
+          <article class="library-item"><div class="lib-num">P1</div><div><h4 class="lib-title">Nonadiabatic, Noncyclic Quantum Geometric Phase Based on Hyperchaotic Driving</h4><div class="lib-meta"><span>EPJ Quantum Technology</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P2</div><div><h4 class="lib-title">Geometry-Driven Quantum Randomness: Phase-Sensitivity Amplification and Min-Entropy Certification</h4><div class="lib-meta"><span>Quantum Information Processing</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P3</div><div><h4 class="lib-title">Quantum Encryption Framework via Hyperchaotic Systems and Geometric Phase Randomness for Secure Quantum Images</h4><div class="lib-meta"><span>Quantum Information Processing</span><span class="dot">&middot;</span><span>2025</span><span class="status">Preprint</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P4</div><div><h4 class="lib-title">Pooling Is a Choice: Sector-Conditioned Finite-Key Analysis of Dynamically Phase-Modulated Quantum Key Distribution</h4><div class="lib-meta"><span>IEEE Transactions on Quantum Engineering</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="conferences" class="wrap">
+      <div class="section-head" style="padding-top: 0;">
+        <div class="section-eyebrow">IV. Academic Engagement</div>
+        <h2 class="section-title">Conference Participation and <em>Professional Memberships.</em></h2>
+      </div>
+
+      <div class="conference-list">
+        <article class="conference-item"><time>4-8 September 2018</time><h3>2nd International Conference of Mathematical Sciences (ICMS 2018)</h3><p>Conference participation.</p></article>
+        <article class="conference-item"><time>2-4 April 2019</time><h3>3rd Scientific Conference on Computing and Information Technology</h3><p>Anbar University.</p></article>
+        <article class="conference-item"><time>4-8 September 2019</time><h3>3rd International Conference of Mathematical Sciences (ICMS 2019)</h3><p>Conference participation.</p></article>
+        <article class="conference-item"><time>17-21 June 2020</time><h3>4th International Conference of Mathematical Sciences (ICMS 2020)</h3><p>Conference participation.</p></article>
+        <article class="conference-item"><time>2024</time><h3>Computational Science and Its Applications - ICCSA 2024 Workshops</h3><p>Springer conference contribution.</p></article>
+        <article class="conference-item"><time>2026</time><h3>Computational Science and Its Applications - ICCSA 2026 Workshops</h3><p>Springer conference contribution.</p></article>
+      </div>
+
+      <div class="closing-grid" style="margin-top: 48px;">
+        <div class="closing-card">
+          <h3>Memberships</h3>
+          <ul><li>IEEE Member</li><li>Iraqi Al-Khwarizmi Association, 2018-Present</li></ul>
+        </div>
+        <div class="closing-card">
+          <h3>Languages</h3>
+          <ul><li>Arabic: Native or bilingual proficiency</li><li>English: Professional working proficiency</li></ul>
+        </div>
+        <div class="closing-card">
+          <h3>Research Documentation</h3>
+          <p>Scientific writing, manuscript preparation, mathematical typesetting, technical reporting, and academic presentation using LaTeX and related tools.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>Nawres Alwan - Academic Curriculum Vitae</span>
+      <span>Full publication records are available through Google Scholar and Scopus.</span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+    const label = toggle.querySelector("[data-theme-label]");
+    const saved = localStorage.getItem("cv-theme");
+
+    if (saved === "dim" || saved === "light") {
+      root.setAttribute("data-theme", saved);
+      label.textContent = saved === "dim" ? "Light" : "Dim";
+    }
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "dim" ? "light" : "dim";
+      root.setAttribute("data-theme", next);
+      label.textContent = next === "dim" ? "Light" : "Dim";
+      localStorage.setItem("cv-theme", next);
+    });
+  </script>
+</body>
+</html>
