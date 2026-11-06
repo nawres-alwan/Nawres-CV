@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic curriculum vitae of Nawres Alwan, PhD Candidate in Quantum Cryptography and Computational Quantum Researcher.">
+  <meta name="description" content="Academic curriculum vitae of Nawres Alwan, PhD Candidate in Computer Science (Universiti Malaya), researching Quantum Cryptography, Quantum Machine Learning and Quantum Information Science.">
   <title>Nawres Alwan - Academic Curriculum Vitae</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,6 +112,8 @@
       color: var(--ink-2);
       transition: all 0.2s ease;
     }
+    .primary-nav a.nav-button { display: inline-block; color: var(--ink-2); }
+    .primary-nav a.nav-button:hover { color: var(--ink); }
     .nav-button:hover { border-color: var(--ink); color: var(--ink); }
 
     .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--rule); }
@@ -279,6 +281,25 @@
     .closing-card li { margin-bottom: 5px; }
 
     footer { border-top: 1px solid var(--rule); padding: 24px 0 34px; color: var(--ink-3); font-size: 13px; }
+
+    .ip-note { border-left: 3px solid var(--accent); background: var(--bg-2); padding: 14px 18px; color: var(--ink-2); font-size: 15px; margin-bottom: 28px; }
+    .ip-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-bottom: 36px; }
+    .ip-card { border: 1px solid var(--rule); border-top: 2px solid var(--accent); background: var(--bg-2); padding: 22px; }
+    .ip-type { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; display: block; }
+    .ip-card h3 { font-family: var(--serif-display); font-weight: 600; font-size: 20px; line-height: 1.25; margin-bottom: 12px; }
+    .ip-facts { display: grid; grid-template-columns: 190px 1fr; gap: 6px 18px; font-size: 14.5px; color: var(--ink-2); }
+    .ip-facts dt { font-size: 11px; font-variant: small-caps; letter-spacing: 0.1em; color: var(--ink-3); padding-top: 3px; }
+    .ip-facts dd { margin: 0; }
+    .status-pending { border: 1px solid var(--accent); color: var(--accent); padding: 1px 7px; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .ip-caveat { font-size: 13.5px; color: var(--ink-3); font-style: italic; margin-top: 10px; }
+    .doi-link { font-family: var(--mono); font-size: 10.5px; font-variant: normal; letter-spacing: 0; color: var(--accent); }
+    .doi-link:hover { text-decoration: underline; }
+    .me { font-weight: 700; color: var(--ink); }
+    .pill-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin: 14px 0 8px; display: block; }
+    .priority { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sage); display: block; margin-bottom: 6px; }
+    .highlights { margin-top: 28px; }
+    .highlights li { padding: 10px 0; border-bottom: 1px dotted var(--rule); font-size: 14px; color: var(--ink-2); }
+    .highlights li strong { color: var(--ink); display: block; font-weight: 600; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; }
 
     @media (max-width: 940px) {
@@ -294,6 +315,8 @@
       .split-grid { grid-template-columns: 1fr; gap: 34px; }
       .footer-row { flex-direction: column; }
       .library-item { grid-template-columns: 36px 1fr; gap: 13px; }
+      .ip-facts { grid-template-columns: 1fr; gap: 2px; }
+      .ip-facts dd { margin-bottom: 8px; }
     }
 
     @media print {
@@ -320,8 +343,9 @@
       .section-head { padding: 22px 0 10px; margin-bottom: 16px; page-break-after: avoid; }
       .section-title { font-size: 20pt; }
       .split-grid, .balanced-grid { gap: 28px; margin-bottom: 24px; }
-      .timeline-block, .funding-card, .research-card, .library-item, .conference-item, .closing-card { break-inside: avoid; page-break-inside: avoid; }
-      .research-card, .funding-card, .filter { background: #fff; }
+      .timeline-block, .funding-card, .ip-card, .ip-note, .research-card, .library-item, .conference-item, .closing-card { break-inside: avoid; page-break-inside: avoid; }
+      .research-card, .funding-card, .ip-card, .ip-note, .filter { background: #fff; }
+      .status-pending { border-color: #000; color: #000; }
       .library-item { padding: 11px 0; }
       .pub-group { margin-bottom: 26px; }
       .conference-list { gap: 12px 22px; }
@@ -344,8 +368,9 @@
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="#education">Education</a>
           <a href="#research">Research</a>
+          <a href="#ip">IP</a>
           <a href="#publications">Publications</a>
-          <button class="nav-button print-button" type="button" onclick="window.print()">Print / PDF</button>
+          <a class="nav-button print-button" href="Nawres_Alwan_CV.pdf" target="_blank" rel="noopener" download="Nawres_Alwan_CV.pdf">Download CV (PDF)</a>
           <button class="nav-button theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme"><span data-theme-label>Dim</span></button>
         </nav>
       </div>
@@ -362,9 +387,15 @@
               <span class="hero-marker">Updated 2026</span>
             </div>
             <h1 class="hero-title">Nawres Alwan<br><em>PhD Candidate.</em></h1>
-            <div class="hero-role">Quantum Cryptography | Computational Quantum Research | AI Engineering</div>
+            <div class="hero-role">PhD Candidate in Computer Science | Quantum Cryptography, Quantum Machine Learning and Quantum Information Science</div>
             <p class="hero-deck">
-              PhD candidate specializing in Quantum Cryptography, with a multidisciplinary research background spanning quantum mechanics, quantum information, cryptography, quantum image processing, chaos theory, dynamical systems, numerical simulation, and artificial intelligence. Experienced in developing mathematical models, computational algorithms, quantum simulations, and deep-learning applications. Recipient of two Graduate Research Assistantship grants from Universiti Malaya.
+              PhD researcher at Universiti Malaya, Malaysia. Doctoral thesis submitted; viva voce examination expected in December 2026. Formal degree completion and certificate issuance pending.
+            </p>
+            <p class="hero-deck">
+              Research spans quantum cryptography and quantum key distribution (QKD), quantum machine learning, quantum image representation and processing, quantum computing and algorithms, quantum geometric phases and Hamiltonian dynamics, quantum optimization and variational algorithms, chaos theory and hyperchaotic cryptographic systems, and graph theory, applied mathematics and numerical simulation. The common thread is mathematical modelling of quantum systems and its use in secure quantum information processing and machine learning. Recipient of two Graduate Research Assistantship grants from Universiti Malaya.
+            </p>
+            <p class="hero-deck">
+              Two patent-related invention disclosures and one copyright-related submission are currently recorded in the institutional intellectual property process at Universiti Malaya. Formal grant, registration, and ownership details remain subject to official documentation.
             </p>
             <div class="hero-meta">
               <div class="meta-cell">
@@ -381,7 +412,7 @@
               </div>
               <div class="meta-cell">
                 <span class="meta-label">Current Academic Status</span>
-                <span class="meta-value">PhD Candidate, expected completion 2026</span>
+                <span class="meta-value">PhD Candidate (Computer Science); thesis submitted, viva expected December 2026</span>
               </div>
             </div>
           </div>
@@ -389,6 +420,11 @@
           <aside class="hero-aside" aria-label="Academic profiles">
             <div class="aside-head">Academic Profiles and Links</div>
             <ul class="aside-list">
+              <li>
+                <a href="Nawres_Alwan_CV.pdf" target="_blank" rel="noopener">
+                  <span class="aside-date">CV</span><span class="aside-title">Full CV (PDF)</span><span class="aside-tag">Download</span>
+                </a>
+              </li>
               <li>
                 <a href="https://scholar.google.com/citations?hl=ar&amp;user=Vxe7MTgAAAAJ&amp;view_op=list_works&amp;sortby=title" target="_blank" rel="noopener noreferrer">
                   <span class="aside-date">Google</span><span class="aside-title">Google Scholar</span><span class="aside-tag">Profile</span>
@@ -410,6 +446,15 @@
                 </a>
               </li>
             </ul>
+            <div class="highlights">
+              <div class="aside-head">Research Highlights</div>
+              <ul>
+                <li><strong>Doctoral thesis submitted</strong>Universiti Malaya; viva voce expected December 2026.</li>
+                <li><strong>15 published peer-reviewed papers</strong>8 journal articles; 7 conference papers and book chapters.</li>
+                <li><strong>Institutional IPR Submission (x2)</strong>Patent-related; pending administrative review. Not granted.</li>
+                <li><strong>Copyright Submission (x1)</strong>Institutional; pending verification. Not registered.</li>
+              </ul>
+            </div>
           </aside>
         </div>
       </div>
@@ -425,12 +470,13 @@
         <div>
           <h3 class="column-title">Education</h3>
           <div class="timeline-block">
-            <span class="timeline-date">2021 - 2026 (expected)</span>
-            <h4 class="timeline-title">PhD Candidate in Quantum Cryptography</h4>
+            <span class="timeline-date">2021 - Present (thesis submitted; viva expected December 2026)</span>
+            <h4 class="timeline-title">Doctor of Philosophy (PhD) in Computer Science &mdash; Candidate</h4>
             <div class="timeline-subtitle">Universiti Malaya, Malaysia</div>
             <div class="timeline-body">
-              <p>Faculty of Computer Science and Information Technology.</p>
-              <p>Research focuses on quantum cryptography, quantum information, quantum image representation and encryption, quantum randomness, geometric phases, hyperchaotic systems, and quantum optimization.</p>
+              <p>Faculty of Computer Science and Information Technology. Research specialization: Quantum Cryptography and Quantum Computing.</p>
+              <p><strong>Status:</strong> Doctoral thesis submitted; viva voce examination expected in December 2026. The official degree certificate is pending and is typically issued some months after the viva, subject to university procedures.</p>
+              <p>Research focuses on quantum cryptography, quantum machine learning, quantum information, quantum image representation and encryption, quantum randomness, geometric phases, hyperchaotic systems, and quantum optimization.</p>
             </div>
           </div>
 
@@ -446,7 +492,7 @@
 
           <div class="timeline-block">
             <span class="timeline-date">2007 - 2011</span>
-            <h4 class="timeline-title">Bachelor of Science (B.Sc.)</h4>
+            <h4 class="timeline-title">Bachelor of Science (B.Sc.) in Applied Mathematics</h4>
             <div class="timeline-subtitle">University of Technology</div>
             <div class="timeline-body">
               <p><strong>Thesis:</strong> Spanning Tree.</p>
@@ -472,9 +518,22 @@
           <div class="timeline-block">
             <span class="timeline-date">Academic Teaching Experience</span>
             <h4 class="timeline-title">Lecturer in Mathematics, Image Processing and Programming</h4>
-            <div class="timeline-subtitle">Mathematics, image processing, MATLAB and computational methods</div>
+            <div class="timeline-subtitle">Subjects taught</div>
             <div class="timeline-body">
               <p>Delivered teaching and technical instruction in mathematics, image processing, and MATLAB programming.</p>
+              <ul>
+                <li>Applied mathematics</li>
+                <li>Image processing</li>
+                <li>MATLAB and scientific programming</li>
+                <li>Computational methods</li>
+              </ul>
+              <span class="pill-label">Additional areas prepared to teach (research-based; not formal courses taught to date)</span>
+              <ul>
+                <li>Python and numerical simulation</li>
+                <li>Quantum computing and quantum algorithms</li>
+                <li>Quantum machine learning</li>
+                <li>Quantum cryptography and QKD</li>
+              </ul>
             </div>
           </div>
 
@@ -487,45 +546,76 @@
       </div>
     </section>
 
+    <section id="ip" class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">II. Intellectual Property</div>
+        <h2 class="section-title">Intellectual Property, Patent-Related Submissions and <em>Copyright.</em></h2>
+      </div>
+
+      <div class="ip-grid">
+        <article class="ip-card">
+          <span class="ip-type">Institutional IPR Submission &middot; Patent-Related</span>
+          <h3>Relational Quantum Geometry for Image and Spatially Indexed Multidomain Data Processing</h3>
+          <dl class="ip-facts">
+            <dt>Institution</dt><dd>Universiti Malaya</dd>
+            <dt>Submission date</dt><dd>21 September 2026</dd>
+            <dt>Status</dt><dd><span class="status-pending">Submitted</span></dd>
+          </dl>
+        </article>
+
+        <article class="ip-card">
+          <span class="ip-type">Institutional IPR Submission &middot; Patent-Related</span>
+          <h3>Quantum geometric learning system and method for structure-aware image processing based on quantum image representation and Hamiltonian-driven manifold evolution</h3>
+          <dl class="ip-facts">
+            <dt>Institution</dt><dd>Universiti Malaya</dd>
+            <dt>Submission date</dt><dd>2 September 2026</dd>
+            <dt>Status</dt><dd><span class="status-pending">Submitted</span></dd>
+          </dl>
+        </article>
+
+        <article class="ip-card">
+          <span class="ip-type">Copyright Submission &middot; Institutional</span>
+          <h3>Quantum Deep Learning Strategies for Facial Feature Extraction Based on Quantum Image Representation</h3>
+          <dl class="ip-facts">
+            <dt>Institution</dt><dd>Universiti Malaya</dd>
+            <dt>Submission date</dt><dd>27 September 2026</dd>
+            <dt>Status</dt><dd><span class="status-pending">Submitted</span></dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
     <section id="research" class="wrap">
       <div class="section-head" style="padding-top: 0;">
-        <div class="section-eyebrow">II. Research Profile</div>
+        <div class="section-eyebrow">III. Research Profile</div>
         <h2 class="section-title">Selected Research Experience and <em>Technical Capabilities.</em></h2>
-        <p class="section-intro">The following areas reflect completed research, published work, ongoing manuscripts, implemented software, and academic projects.</p>
+        <p class="section-intro">The following areas reflect completed research, published work, ongoing manuscripts, implemented software, and academic projects. Areas are ordered by relevance to quantum computing and quantum information research; items marked ongoing are not yet published.</p>
       </div>
 
       <div class="research-cards">
         <article class="research-card">
-          <h3>Quantum Cryptography and QKD</h3>
-          <p>Development and analysis of quantum cryptographic models, dynamically modulated quantum key distribution, finite-key security concepts, and secure quantum communication protocols.</p>
+          <span class="priority">Priority 1</span>
+          <h3>Quantum Cryptography, QKD and Quantum Information Security</h3>
+          <p>Development and analysis of quantum cryptographic models, dynamically modulated quantum key distribution, finite-key security analysis, quantum randomness, and secure quantum communication protocols.</p>
         </article>
         <article class="research-card">
-          <h3>Quantum-Mechanical and Hamiltonian Modelling</h3>
-          <p>Mathematical and computational modelling of quantum systems, Hamiltonian dynamics, quantum simulation, and quantum-information processes.</p>
+          <span class="priority">Priority 2</span>
+          <h3>Quantum Machine Learning, Optimization and Algorithms</h3>
+          <p>Quantum natural-gradient optimization, damping strategies, trust-region concepts, variational quantum circuits, and robust numerical training methods; quantum deep-learning approaches built on quantum image representation (ongoing).</p>
         </article>
         <article class="research-card">
-          <h3>Quantum Geometric Phases</h3>
-          <p>Investigation of nonadiabatic and noncyclic geometric phases and their applications in quantum randomness, cryptography, and phase-sensitive quantum systems.</p>
+          <span class="priority">Priority 3</span>
+          <h3>Quantum Image Representation, Geometric Methods and Simulation</h3>
+          <p>Quantum image representation and encryption models using adjacency matrices, Fourier transforms, multichannel encoding and quantum circuits; nonadiabatic and noncyclic geometric phases; Hamiltonian modelling and quantum simulation.</p>
         </article>
         <article class="research-card">
-          <h3>Quantum Image Processing</h3>
-          <p>Design of quantum image representation and encryption models using adjacency matrices, Fourier transforms, multichannel encoding, and quantum circuits.</p>
-        </article>
-        <article class="research-card">
-          <h3>Chaos and Dynamical Systems</h3>
-          <p>Development and analysis of high-dimensional hyperchaotic systems for encryption, pseudo-random number generation, secure information processing, and quantum-driving models.</p>
-        </article>
-        <article class="research-card">
-          <h3>Quantum Optimization</h3>
-          <p>Research on quantum natural-gradient optimization, damping strategies, trust-region concepts, variational quantum circuits, and robust numerical training methods.</p>
+          <span class="priority">Priority 4</span>
+          <h3>Mathematical Foundations, Chaos Theory and Numerical Methods</h3>
+          <p>Graph theory and spectral methods, high-dimensional hyperchaotic systems for encryption and pseudo-random number generation, nonlinear dynamics, numerical simulation, and reproducible scientific computing in Python and MATLAB.</p>
         </article>
         <article class="research-card">
           <h3>Machine Learning and AI Engineering</h3>
-          <p>Development of deep-learning and computer-vision workflows for face recognition and optical character recognition, together with AI applications built using open-source models and frameworks.</p>
-        </article>
-        <article class="research-card">
-          <h3>Numerical and Scientific Computing</h3>
-          <p>Implementation of numerical experiments, simulation algorithms, data analysis, visualization, and reproducible scientific workflows using Python and MATLAB.</p>
+          <p>Deep-learning and computer-vision workflows for face recognition and optical character recognition, together with AI applications built using open-source models and frameworks.</p>
         </article>
       </div>
 
@@ -574,52 +664,51 @@
 
     <section id="publications" class="wrap">
       <div class="section-head" style="padding-top: 0;">
-        <div class="section-eyebrow">III. Research Output</div>
+        <div class="section-eyebrow">IV. Research Output</div>
         <h2 class="section-title">Publications, Conference Papers and <em>Current Manuscripts.</em></h2>
-        <p class="section-intro">Preprints and manuscripts are clearly separated from peer-reviewed publications to preserve publication-status accuracy.</p>
+        <p class="section-intro">Manuscripts under review are kept separate from published peer-reviewed work and are not counted as publications. Author names appear as recorded; where an author list is not shown, it is pending verification against the publisher record.</p>
       </div>
 
       <div class="pub-group">
-        <h3 class="pub-group-title">Peer-Reviewed Journal Articles</h3>
+        <h3 class="pub-group-title">Published Peer-Reviewed Journal Articles</h3>
         <div class="library-list">
-          <article class="library-item"><div class="lib-num">01</div><div><h4 class="lib-title">Multilayered Quantum Computing and Simulation System for Enhanced Image Representation of HSI Based Fourier Transform and Adjacency Matrix</h4><div class="lib-meta"><span>Scientific Reports</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">02</div><div><h4 class="lib-title">A Comprehensive Review on Classification of Quantum Image Representations</h4><div class="lib-meta"><span>Archives of Computational Methods in Engineering</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">03</div><div><h4 class="lib-title">A Multi-Channel Quantum Image Representation Model with Qubit Sequences for Quantum-Inspired Image and Image Retrieval</h4><div class="lib-meta"><span>AIMS Mathematics</span><span class="dot">&middot;</span><span>2025</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">04</div><div><h4 class="lib-title">Color Image Encryption Through Multi-S-box Generated by Hyperchaotic System and Mixture of Pixel Bits</h4><div class="lib-meta"><span>Fractals</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">05</div><div><h4 class="lib-title">Coding and Descriptions for the Subset of Twin Star Mean Labeling</h4><div class="lib-meta"><span>Asia Pacific Journal of Mathematics</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">06</div><div><h4 class="lib-title">A Secure Image Cryptosystem via Multiple Chaotic Maps</h4><div class="lib-meta"><span>Eurasian Journal of Mathematical and Computer Applications</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">07</div><div><h4 class="lib-title">Tripartite Graphs with Energy Aggregation</h4><p class="lib-desc">N. Al-Saidi, N. A. Alwan, and R. T. Rasheed.</p><div class="lib-meta"><span>Boletim da Sociedade Paranaense de Matematica</span><span class="dot">&middot;</span><span>Vol. 38, No. 7, pp. 149-167</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">08</div><div><h4 class="lib-title">A General Formula for Characteristic Polynomials of Some Special Graphs</h4><p class="lib-desc">N. A. Alwan and N. M. Al-Saidi.</p><div class="lib-meta"><span>Engineering and Technology Journal</span><span class="dot">&middot;</span><span>Vol. 34, No. 5B, pp. 638-650</span><span class="dot">&middot;</span><span>2016</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">01</div><div><h4 class="lib-title">Multilayered Quantum Computing and Simulation System for Enhanced Image Representation of HSI Based Fourier Transform and Adjacency Matrix</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, S. J. Obaiys, N. M. G. Al-Saidi, N. F. Mohd Noor, and Y. Karaca.</p><div class="lib-meta"><span>Scientific Reports</span><span class="dot">&middot;</span><span>2025</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1038/s41598-025-24168-4" target="_blank" rel="noopener noreferrer">DOI: 10.1038/s41598-025-24168-4</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">02</div><div><h4 class="lib-title">A Comprehensive Review on Classification of Quantum Image Representations</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, N. M. G. Al-Saidi, S. J. Obaiys, N. F. Mohd Noor, and M. Ahmad.</p><div class="lib-meta"><span>Archives of Computational Methods in Engineering</span><span class="dot">&middot;</span><span>2025</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1007/s11831-025-10369-7" target="_blank" rel="noopener noreferrer">DOI: 10.1007/s11831-025-10369-7</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">03</div><div><h4 class="lib-title">A Multi-Channel Quantum Image Representation Model with Qubit Sequences for Quantum-Inspired Image and Image Retrieval</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, S. J. Obaiys, N. M. G. Al-Saidi, N. F. Mohd Noor, and Y. Karaca.</p><div class="lib-meta"><span>AIMS Mathematics</span><span class="dot">&middot;</span><span>2025</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.3934/math.2025499" target="_blank" rel="noopener noreferrer">DOI: 10.3934/math.2025499</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">04</div><div><h4 class="lib-title">Color Image Encryption Through Multi-S-box Generated by Hyperchaotic System and Mixture of Pixel Bits</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, S. J. Obaiys, N. F. Mohd Noor, N. M. G. Al-Saidi, and Y. Karaca.</p><div class="lib-meta"><span>Fractals</span><span class="dot">&middot;</span><span>2024</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1142/s0218348x24400395" target="_blank" rel="noopener noreferrer">DOI: 10.1142/s0218348x24400395</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">05</div><div><h4 class="lib-title">Coding and Descriptions for the Subset of Twin Star Mean Labeling</h4><div class="lib-meta"><span>Asia Pacific Journal of Mathematics</span><span class="dot">&middot;</span><span>2024</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.28924/APJM/11-59" target="_blank" rel="noopener noreferrer">DOI: 10.28924/APJM/11-59</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">06</div><div><h4 class="lib-title">A Secure Image Cryptosystem via Multiple Chaotic Maps</h4><p class="lib-desc">M. T. Wazi, D. S. Ali, N. M. G. Al-Saidi, and <strong class="me">N. A. Alwan</strong>.</p><div class="lib-meta"><span>Discrete Mathematics, Algorithms and Applications</span><span class="dot">&middot;</span><span>Vol. 14, No. 4</span><span class="dot">&middot;</span><span>2021</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1142/S179383092150141X" target="_blank" rel="noopener noreferrer">DOI: 10.1142/S179383092150141X</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">07</div><div><h4 class="lib-title">Tripartite Graphs with Energy Aggregation</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, N. M. G. Al-Saidi, and R. T. Rasheed.</p><div class="lib-meta"><span>Boletim da Sociedade Paranaense de Matematica</span><span class="dot">&middot;</span><span>Vol. 38, No. 7, pp. 149-167</span><span class="dot">&middot;</span><span>2019</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.5269/bspm.v38i7.44463" target="_blank" rel="noopener noreferrer">DOI: 10.5269/bspm.v38i7.44463</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">08</div><div><h4 class="lib-title">A General Formula for Characteristic Polynomials of Some Special Graphs</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong> and N. M. Al-Saidi.</p><div class="lib-meta"><span>Engineering and Technology Journal</span><span class="dot">&middot;</span><span>Vol. 34, No. 5B, pp. 638-650</span><span class="dot">&middot;</span><span>2016</span><span class="status">Published</span></div></div></article>
         </div>
       </div>
 
       <div class="pub-group">
-        <h3 class="pub-group-title">Peer-Reviewed Conference Papers and Book Chapters</h3>
+        <h3 class="pub-group-title">Published Conference Papers and Book Chapters</h3>
         <div class="library-list">
-          <article class="library-item"><div class="lib-num">09</div><div><h4 class="lib-title">A Trust Optimization Region of the Quantum Natural Gradient for the Large Damping Domain</h4><p class="lib-desc">Computational Science and Its Applications - ICCSA 2026 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>4 July 2026</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">10</div><div><h4 class="lib-title">A Pseudo Random Number Generator Based on 4D Hyperchaotic Systems, Riddled Basins of Attraction and Advanced Microfluidic Technology</h4><p class="lib-desc">Computational Science and Its Applications - ICCSA 2024 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>30 July 2024</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">11</div><div><h4 class="lib-title">Secure Image Encryption Using Single-Mode Fiber and Dense Wavelength Division Multiplexing in Chaotic Systems</h4><div class="lib-meta"><span>Springer</span><span class="dot">&middot;</span><span>2024</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">12</div><div><h4 class="lib-title">Performance-Enhancing of RSA Public Key via Three-Dimensional Hyperchaotic System</h4><p class="lib-desc">N. A. Alwan, A. Y. Yousif, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2325</span><span class="dot">&middot;</span><span>020027</span><span class="dot">&middot;</span><span>February 2021</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">13</div><div><h4 class="lib-title">A New Approach for the Characteristic Polynomial of a Complete Tripartite Graph</h4><p class="lib-desc">N. A. Alwan, N. M. Al-Saidi, and W. J. Abdulaa.</p><div class="lib-meta"><span>AIP Conference Proceedings 2334</span><span class="dot">&middot;</span><span>080002</span><span class="dot">&middot;</span><span>March 2021</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">14</div><div><h4 class="lib-title">Image Encryption Based on Highly Sensitive Chaotic System</h4><p class="lib-desc">D. S. Ali, N. A. Alwan, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2183</span><span class="dot">&middot;</span><span>080007</span><span class="dot">&middot;</span><span>2020</span><span class="status">Published</span></div></div></article>
-          <article class="library-item"><div class="lib-num">15</div><div><h4 class="lib-title">The Energy of a Tripartite Graph</h4><p class="lib-desc">N. A. Alwan, N. M. Al-Saidi, and R. T. Rasheed.</p><div class="lib-meta"><span>AIP Conference Proceedings 2086</span><span class="dot">&middot;</span><span>030006</span><span class="dot">&middot;</span><span>April 2019</span><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">09</div><div><h4 class="lib-title">A Trust Optimization Region of the Quantum Natural Gradient for the Large Damping Domain</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, S. J. Obaiys, N. M. G. Al-Saidi, and R. Chadli.</p><p class="lib-desc">Computational Science and Its Applications - ICCSA 2026 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>4 July 2026</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1007/978-3-032-30497-1_18" target="_blank" rel="noopener noreferrer">DOI: 10.1007/978-3-032-30497-1_18</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">10</div><div><h4 class="lib-title">A Pseudo Random Number Generator Based on 4D Hyperchaotic Systems, Riddled Basins of Attraction and Advanced Microfluidic Technology</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, S. J. Obaiys, N. M. G. Al-Saidi, N. F. Mohd Noor, and Y. Karaca.</p><p class="lib-desc">Computational Science and Its Applications - ICCSA 2024 Workshops.</p><div class="lib-meta"><span>Springer, Cham</span><span class="dot">&middot;</span><span>30 July 2024</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1007/978-3-031-65154-0_6" target="_blank" rel="noopener noreferrer">DOI: 10.1007/978-3-031-65154-0_6</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">11</div><div><h4 class="lib-title">Secure Image Encryption Using Single-Mode Fiber and Dense Wavelength Division Multiplexing in Chaotic Systems</h4><p class="lib-desc">N. M. G. Al-Saidi, S. J. Obaiys, <strong class="me">N. A. Alwan</strong>, A. J. Mohammed, A. K. Farhan, and Y. Karaca.</p><div class="lib-meta"><span>Springer</span><span class="dot">&middot;</span><span>2024</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1007/978-3-031-65154-0_5" target="_blank" rel="noopener noreferrer">DOI: 10.1007/978-3-031-65154-0_5</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">12</div><div><h4 class="lib-title">Performance-Enhancing of RSA Public Key via Three-Dimensional Hyperchaotic System</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, A. Y. Yousif, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2325</span><span class="dot">&middot;</span><span>020027</span><span class="dot">&middot;</span><span>February 2021</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1063/5.0040397" target="_blank" rel="noopener noreferrer">DOI: 10.1063/5.0040397</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">13</div><div><h4 class="lib-title">A New Approach for the Characteristic Polynomial of a Complete Tripartite Graph</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, N. M. Al-Saidi, and W. J. Abdulaa.</p><div class="lib-meta"><span>AIP Conference Proceedings 2334</span><span class="dot">&middot;</span><span>080002</span><span class="dot">&middot;</span><span>March 2021</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1063/5.0042627" target="_blank" rel="noopener noreferrer">DOI: 10.1063/5.0042627</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">14</div><div><h4 class="lib-title">Image Encryption Based on Highly Sensitive Chaotic System</h4><p class="lib-desc">D. S. Ali, <strong class="me">N. A. Alwan</strong>, and N. M. Al-Saidi.</p><div class="lib-meta"><span>AIP Conference Proceedings 2183</span><span class="dot">&middot;</span><span>080007</span><span class="dot">&middot;</span><span>2019</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1063/1.5136200" target="_blank" rel="noopener noreferrer">DOI: 10.1063/1.5136200</a><span class="status">Published</span></div></div></article>
+          <article class="library-item"><div class="lib-num">15</div><div><h4 class="lib-title">The Energy of a Tripartite Graph</h4><p class="lib-desc"><strong class="me">N. A. Alwan</strong>, N. M. G. Al-Saidi, and R. T. Rasheed.</p><div class="lib-meta"><span>AIP Conference Proceedings 2091</span><span class="dot">&middot;</span><span>030006</span><span class="dot">&middot;</span><span>April 2019</span><span class="dot">&middot;</span><a class="doi-link" href="https://doi.org/10.1063/1.5095091" target="_blank" rel="noopener noreferrer">DOI: 10.1063/1.5095091</a><span class="status">Published</span></div></div></article>
         </div>
       </div>
 
       <div class="pub-group">
-        <h3 class="pub-group-title">Preprints and Manuscripts</h3>
+        <h3 class="pub-group-title">Manuscripts Under Review (Not Yet Published)</h3>
         <div class="library-list">
-          <article class="library-item"><div class="lib-num">P1</div><div><h4 class="lib-title">Nonadiabatic, Noncyclic Quantum Geometric Phase Based on Hyperchaotic Driving</h4><div class="lib-meta"><span>EPJ Quantum Technology</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
-          <article class="library-item"><div class="lib-num">P2</div><div><h4 class="lib-title">Geometry-Driven Quantum Randomness: Phase-Sensitivity Amplification and Min-Entropy Certification</h4><div class="lib-meta"><span>Quantum Information Processing</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
-          <article class="library-item"><div class="lib-num">P3</div><div><h4 class="lib-title">Quantum Encryption Framework via Hyperchaotic Systems and Geometric Phase Randomness for Secure Quantum Images</h4><div class="lib-meta"><span>Quantum Information Processing</span><span class="dot">&middot;</span><span>2025</span><span class="status">Preprint</span></div></div></article>
-          <article class="library-item"><div class="lib-num">P4</div><div><h4 class="lib-title">Pooling Is a Choice: Sector-Conditioned Finite-Key Analysis of Dynamically Phase-Modulated Quantum Key Distribution</h4><div class="lib-meta"><span>IEEE Transactions on Quantum Engineering</span><span class="dot">&middot;</span><span>2026</span><span class="status">Preprint</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P1</div><div><h4 class="lib-title">Quantum Encryption Framework via Hyperchaotic Systems and Geometric Phase Randomness for Secure Quantum Images</h4><div class="lib-meta"><span>Quantum Information Processing</span><span class="dot">&middot;</span><span>2025</span><span class="status">Under Review</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P2</div><div><h4 class="lib-title">Geometry-Driven Quantum Randomness: Phase-Sensitivity Amplification and Min-Entropy Certification under Hyperchaotic Control</h4><div class="lib-meta"><span>Scientific Reports</span><span class="dot">&middot;</span><span>2026</span><span class="status">Under Review</span></div></div></article>
+          <article class="library-item"><div class="lib-num">P3</div><div><h4 class="lib-title">A Novel Sector-Conditioned Finite-Key Method for Secure Dynamically Phase-Modulated Quantum Key Distribution Using PSB Geometric Phase</h4><div class="lib-meta"><span>Scientific Reports</span><span class="dot">&middot;</span><span>2026</span><span class="status">Under Review</span></div></div></article>
         </div>
       </div>
     </section>
 
     <section id="conferences" class="wrap">
       <div class="section-head" style="padding-top: 0;">
-        <div class="section-eyebrow">IV. Academic Engagement</div>
+        <div class="section-eyebrow">V. Academic Engagement</div>
         <h2 class="section-title">Conference Participation and <em>Professional Memberships.</em></h2>
       </div>
 
